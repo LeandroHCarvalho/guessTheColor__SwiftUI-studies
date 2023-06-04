@@ -15,6 +15,7 @@
 		C728873E2A1D0348006E2581 /* GuessTheColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728873D2A1D0348006E2581 /* GuessTheColorUITests.swift */; };
 		C72887402A1D0348006E2581 /* GuessTheColorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728873F2A1D0348006E2581 /* GuessTheColorUITestsLaunchTests.swift */; };
 		C728874D2A1D0543006E2581 /* TargetAndGuessCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728874C2A1D0543006E2581 /* TargetAndGuessCircleView.swift */; };
+		C7A9D0BC2A2AF53C00BAA7CC /* TargetAndGuessRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9D0BB2A2AF53C00BAA7CC /* TargetAndGuessRectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C728873D2A1D0348006E2581 /* GuessTheColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheColorUITests.swift; sourceTree = "<group>"; };
 		C728873F2A1D0348006E2581 /* GuessTheColorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheColorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C728874C2A1D0543006E2581 /* TargetAndGuessCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetAndGuessCircleView.swift; sourceTree = "<group>"; };
+		C7A9D0BB2A2AF53C00BAA7CC /* TargetAndGuessRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetAndGuessRectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				C72887222A1D0346006E2581 /* GuessTheColorApp.swift */,
 				C72887242A1D0346006E2581 /* ContentView.swift */,
+				C7A9D0BB2A2AF53C00BAA7CC /* TargetAndGuessRectView.swift */,
 				C728874C2A1D0543006E2581 /* TargetAndGuessCircleView.swift */,
 				C72887262A1D0347006E2581 /* Assets.xcassets */,
 				C72887282A1D0347006E2581 /* Preview Content */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C728874D2A1D0543006E2581 /* TargetAndGuessCircleView.swift in Sources */,
+				C7A9D0BC2A2AF53C00BAA7CC /* TargetAndGuessRectView.swift in Sources */,
 				C72887252A1D0346006E2581 /* ContentView.swift in Sources */,
 				C72887232A1D0346006E2581 /* GuessTheColorApp.swift in Sources */,
 			);

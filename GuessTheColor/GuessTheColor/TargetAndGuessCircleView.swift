@@ -51,6 +51,6 @@ struct TargetAndGuessCircleView: View {
 
 struct TargetAndGuessCircleView_Previews: PreviewProvider {
     static var previews: some View {
-        TargetAndGuessCircleView(redTarget: .constant(0.1), greenTarget: .constant(0.2), blueTarget: .constant(0.2), redGuess: .constant(0.9), greenGuess: .constant(0.1), blueGuess: .constant(0.7), pickerLevelIndex: .constant(2)).previewLayout(.fixed(width: 475, height: 200))
+        TargetAndGuessCircleView(redTarget: .constant(0.1), greenTarget: .constant(0.2), blueTarget: .constant(0.2), redGuess: .constant(0.9), greenGuess: .constant(0.1), blueGuess: .constant(0.7), pickerLevelIndex: .constant(2)).previewLayout(.fixed(width: 300, height: 300))
     }
 }

@@ -16,7 +16,7 @@ struct ContentView: View {
     @State var greenGuess: Double
     @State var blueGuess: Double
     @State var pickerLevelIndex = 2
-//    @State var alertIsShown = false
+    @State var alertIsShown = false
     
 //    @State private var scale: CGFloat = 1
     
@@ -41,18 +41,40 @@ struct ContentView: View {
             CreatePickerSegment(pickerLevelIndex: $pickerLevelIndex)
             
             //add the target and guess rectangles
-//           TargetAndGuessRectView(redTarget: $redTarget, greenTarget: $greenTarget, blueTarget: $blueTarget, redGuess: $redGuess, greenGuess: $greenGuess, blueGuess: $blueGuess, pickerLevelIndex: $pickerLevelIndex)
-//           Spacer()
+           TargetAndGuessRectView(redTarget: $redTarget, greenTarget: $greenTarget, blueTarget: $blueTarget, redGuess: $redGuess, greenGuess: $greenGuess, blueGuess: $blueGuess, pickerLevelIndex: $pickerLevelIndex)
+           Spacer()
            
            //add the sliders
           StyleTheSliders(redGuess: $redGuess, greenGuess: $greenGuess, blueGuess: $blueGuess, pickerLevelIndex: $pickerLevelIndex)
 //           .scaleEffect(scale)
-           .animation(.interactiveSpring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.5))
-           
+                .animation(.interactiveSpring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.5), value: 1)
+//           .animation(.interactiveSpring(response: 0.4, dampingFraction: 0.5, blendDuration: 0.5))
            Spacer()
             
-            
-        }
+            //add the Button
+            Button {
+                self.alertIsShown = true
+            } label: {
+                Text("Check Score")
+                    .foregroundColor(.black)
+                    .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+                    .background(Color.yellow)
+                    .cornerRadius(.infinity)
+                    .shadow(color: Color.black, radius: 2, y: 4)
+            }
+            .alert(isPresented: $alertIsShown) { () -> Alert in
+                Alert(title: Text("Your Score"), message: Text("\(self.calculateScore())"),
+                      primaryButton: Alert.Button.default(Text("New Game?"), action: {
+                    self.reset()
+                }),
+                      secondaryButton: Alert.Button.destructive(Text("Continue Playing"), action: {
+                    print(Int(self.redTarget * 255.0))
+                    print(Int(self.greenTarget * 255.0))
+                    print(Int(self.blueTarget * 255.0))
+                }))
+            }
+
+        }.background(Image("background8").resizable().ignoresSafeArea(.all))
     }
     
     func calculateScore() -> Int  {
@@ -120,9 +142,10 @@ struct CreatePickerSegment: View {
 }
 
 struct CreateSlider: View {
+    
     @Binding var value: Double
-
     var color: Color
+    
     var body: some View {
         HStack {
             Text("0")
